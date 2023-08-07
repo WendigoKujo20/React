@@ -10,10 +10,10 @@ export default function Navbar() {
 
     return (
       <li
-        className={`mx-3 ${isActive ? "border-b-2 border-black" : ""}`}
+        className={`mx-3 ${isActive ? "border-b-4 border-black" : ""}`}
       >
         <Link to={link}>
-          <h1 className="font-montserrat text-xl text-white font-bold hover:text-gray-300">
+          <h1 className={`font-montserrat text-xl text-white font-bold transition-all delay-150 duration-[25ms] ease-in ${isActive ? "": "hover:border-b-4 border-gray-600"}`} >
             {text}
           </h1>
         </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
               <img src={logo} alt="Navbar Image" width={"60px"} />
             </Link>
           </div>
-          <div className="ml-96">
+          <div className="ml-[500px]">
             <ul className="flex">
               <NavItem link="/" text={"Inicio"} />
               <NavItem link="/productos" text={"Productos"} />
